@@ -753,14 +753,23 @@ a:hover, a:active {
 	display: flex;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
+.main-navigation button {
+background: transparent;
+}
+
+
+@media screen and (min-width: 768px) {
+	.navbar-toggler {
 		display: none;
 	}
 	
 	.main-navigation ul {
 		display: block;
 		text-transform: uppercase;
+	}
+
+	.nav .navbar-nav {
+		float: right!important;
 	}
 }
 
