@@ -398,7 +398,6 @@ textarea {
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -668,7 +667,7 @@ a:hover, a:active {
 }
 .page-header .site-branding .site-title {
    color: #000;
-   font: 700 1.5em/1.3125 'Montserrat', 'Open Sans', Arial, sans-serif;
+   font: 700 1.2em/1.3125 'Montserrat', 'Open Sans', Arial, sans-serif;
    display: block;
    text-transform: uppercase;
 }
@@ -679,6 +678,16 @@ a:hover, a:active {
 	text-transform: uppercase;
 	text-decoration: none;
  }
+ @media screen and (min-width: 768px) {
+	.page-header .site-branding .site-title {
+		font-size: 2em;
+	}
+
+	#masthead {
+		padding: 0;
+	}
+ }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -735,16 +744,15 @@ a:hover, a:active {
 	
 }
 
-.main-navigation a {
+.navbar a {
 	display: block;
 	text-decoration: none;
 	font-size: 1.5rem;
 	color: #000;
 }
-.main-navigation a:hover {
-	text-decoration: none;
-	font-weight: bold;
-	color: darkgray;
+
+nav.navbar {
+	margin-bottom: 0;
 }
 
 /* Small menu. */
@@ -757,19 +765,27 @@ a:hover, a:active {
 background: transparent;
 }
 
+button.navbar-toggler {
+	background: transparent;
+	border: none;
+}
+
 
 @media screen and (min-width: 768px) {
 	.navbar-toggler {
 		display: none;
 	}
 	
-	.main-navigation ul {
-		display: block;
+	.navbar {
 		text-transform: uppercase;
 	}
 
-	.nav .navbar-nav {
-		float: right!important;
+	ul#primary-menu.nav.navbar-nav {
+		float: right;
+	}
+
+	.navbar div.container {
+		margin-right: 0;
 	}
 }
 
