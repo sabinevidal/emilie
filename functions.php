@@ -169,3 +169,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+/**
+* Add theme support for Portfolio Custom Post Type.
+*/
+add_action( 'after_setup_theme', emilie_jetpack_portfolio_cpt );
+function emilie_jetpack_portfolio_cpt() {
+add_theme_support( 'jetpack-portfolio' );
+}
