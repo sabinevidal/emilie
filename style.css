@@ -678,6 +678,10 @@ a:hover, a:active {
 	text-transform: uppercase;
 	text-decoration: none;
  }
+
+ .site-description {
+    margin-block-start: -1em;
+ }
  @media screen and (min-width: 768px) {
 	.page-header .site-branding .site-title {
 		font-size: 2em;
@@ -747,12 +751,16 @@ a:hover, a:active {
 .navbar a {
 	display: block;
 	text-decoration: none;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	color: #000;
 }
 
 nav.navbar {
 	margin-bottom: 0;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
 }
 
 /* Small menu. */
@@ -1069,3 +1077,64 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+## Bootstrap card-columns portfolio
+--------------------------------------------------------------*/
+@media (min-width: 768px) {
+    .project .card-columns {
+    column-count: 2;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1190px;
+    }
+}
+
+.project-images .card {
+    border: none;
+    padding: 3%;
+  
+}
+
+p.card-text {
+    font-size: 0.8rem;
+}
+
+/*-----SINGLE PROJECT PAGE -----------*/
+
+.card.project-info {
+    border: 1px solid rgba(0,0,0,.125);
+    position: relative;
+}
+.card.project-info:before {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 5px;
+    right: -8px;
+    bottom: -8px;
+    border: 1px solid #DDAC30;
+    border-radius: .25rem;
+}
+
+.project h2 {
+    font-size: 2rem;
+    width: 80%;
+    margin: -2rem auto 3rem;
+    text-align: right;
+    z-index: 2;
+    position: relative;
+    font-family: 'Song Myung', serif;
+}
+@media (min-width: 768px) {
+
+    .project h2 {
+        font-size: 2.5rem;
+    }
+}
+/*-----end SINGLE PROJECT PAGE -----------*/
