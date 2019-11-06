@@ -1094,15 +1094,18 @@ object {
     }
 }
 
-.project-images .card {
+.card {
     border: none;
     padding: 3%;
-  
 }
 
 p.card-text {
     font-size: 0.8rem;
 }
+
+/*--------------------------------------------------------------
+## CUSTOM CSS
+--------------------------------------------------------------*/
 
 /*-----SINGLE PROJECT PAGE -----------*/
 
