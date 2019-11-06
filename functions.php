@@ -170,10 +170,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
-/**
-* Add theme support for Portfolio Custom Post Type.
-*/
-add_action( 'after_setup_theme', emilie_jetpack_portfolio_cpt );
-function emilie_jetpack_portfolio_cpt() {
-add_theme_support( 'jetpack-portfolio' );
+
+
+// CUSTOM Portfolio post type
+function create_custom_post_types() {
+    register_post_type( 'portfolio_projects',
+        array(
+            'labels' => array(
+                'name' => __( 'Portfolio Projects' ),
+                'singular_name' => __( 'Portfolio Project' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'portfolio_projects' ),
+        )
+    );
 }
+add_action( 'init', 'create_custom_post_types' );
