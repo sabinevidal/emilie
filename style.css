@@ -1106,7 +1106,31 @@ p.card-text {
 /*--------------------------------------------------------------
 ## CUSTOM CSS
 --------------------------------------------------------------*/
+/*----- FRONT PAGE ---------*/
 
+.bio {
+    width: 70%;
+    margin:1rem auto 2rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: white;
+    z-index: 4;
+    position: relative;
+}
+
+.bio p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+.bio {
+    margin: -3rem auto 2rem;
+    width: 55%;
+}
+}
+
+/*----- End FRONT PAGE ---------*/
 /*-----SINGLE PROJECT PAGE -----------*/
 
 .card.project-info {

@@ -37,6 +37,7 @@ get_header();
                 $info_6 = get_field('info_6');
                 $image_7 = get_field('image_7');
                 $info_7 = get_field('info_7');
+                $link = get_field('link');
                 $size = "full";
                 ?>
                 
@@ -62,7 +63,7 @@ get_header();
                                 <?php if ($image_2 = get_field('image_2')) { ?>
                                     <div class="card">
                                         <?php if($image_2) {
-                                                echo wp_get_attachment_image( $image_2, $size );
+                                                echo wp_get_attachment_image( $image_2, $size);
                                         } ?> 
                                         <div class="card-body">
                                             <p class="card-text"><?php if($info_2) { echo $info_2; } ?></p>

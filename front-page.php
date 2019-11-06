@@ -15,22 +15,16 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
         <div class="bio">
-            <p> Hello there </p>
-        </div>
-
-        <div id="primary" class="home-page hero-content">
-		<div class="main-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php the_content(); ?>
-			<?php endwhile; // end of the loop. ?>
-		</div><!-- .main-content -->
-    </div><!-- #primary -->
+                <?php the_content(); ?>
+            <?php endwhile; // end of the loop. ?>
+        </div>
     
-    <section class="portfolio-work">
+        <section class="portfolio-work">
 			<div class="homepage-portfolio-work">
 				<?php query_posts('posts_per_page=3&post_type=portfolio_projects'); ?>
 				<?php while ( have_posts() ) : the_post(); 
@@ -43,16 +37,19 @@ get_header();
                     $image_1 = get_field("image_7");
                     $image_1 = get_field("image_8");
                     $image_1 = get_field("image_9");
-					$size = "full";
+                    $link = get_field('link');
+                    $size = "full";
+                    
 				?>
 				<div class="project-images">
                         <div class="container">
                             <div class="card-columns">
                                 <?php if ($image_1 = get_field('image_1')) { ?>
                                     <div class="card project-info">
-                                        <?php if($image_1) {
+                                    <a href="<?php get_field('link') ?>" target="_blank"><?php if($image_1) {
                                                 echo wp_get_attachment_image( $image_1, $size );
                                         } ?> 
+                                    </a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_2 = get_field('image_2')) { ?>
@@ -133,8 +130,8 @@ get_header();
 		?>
 	
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 	
 
 <?php
