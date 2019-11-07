@@ -30,7 +30,7 @@
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-controls="bs-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: black; font-size:28px;"></i></span>
+				<span class="navbar-toggler-icon"><i class="fas fa-bars" style="font-size:28px;"></i></span>
 				</button>
 				<?php
 				wp_nav_menu( array(

@@ -132,7 +132,7 @@ function emilie_scripts() {
 
     wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.9.0/css/all.css' );
     
-    wp_enqueue_style( 'google-fonts', "https://fonts.googleapis.com/css?family=Enriqueta:500,600|Song+Myung&display=swap" );
+    wp_enqueue_style( 'google-fonts', "https://fonts.googleapis.com/css?family=Lato:400,400i,700|Song+Myung&display=swap" );
 
 	wp_enqueue_script( 'bootstrap_js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery') );
 

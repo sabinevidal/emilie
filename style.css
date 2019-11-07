@@ -396,7 +396,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -613,11 +613,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: darkblue;
 }
 
 a:visited {
-	color: purple;
+	color: rgb(5, 4, 48);
 }
 
 a:hover, a:focus, a:active {
@@ -667,13 +667,13 @@ a:hover, a:active {
 }
 .page-header .site-branding .site-title {
    color: #000;
-   font: 700 1.2em/1.3125 'Montserrat', 'Open Sans', Arial, sans-serif;
+   font: 700 1.2em/1.3125 'Song Myung', serif;; 
    display: block;
    text-transform: uppercase;
 }
 .page-header .site-branding .site-title a {
 	color: #000;
-	font: 700 1.5em/1.3125 'Montserrat', 'Open Sans', Arial, sans-serif;
+	/* font: 700 1.5em/1.3125 'Montserrat', 'Open Sans', Arial, sans-serif; */
 	display: block;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -684,7 +684,7 @@ a:hover, a:active {
  }
  @media screen and (min-width: 768px) {
 	.page-header .site-branding .site-title {
-		font-size: 2em;
+		font-size: 3em;
 	}
 
 	#masthead {
@@ -695,64 +695,19 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	width: 100%;
-	display: inline-block;
-	padding: 0.5em;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-right: 1rem;
-	justify-content: space-around;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: right;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.main-navigation li {
-	float: right;
-	position: relative;
-	padding-right: 1%;
-	
-}
 
 .navbar a {
 	display: block;
 	text-decoration: none;
 	font-size: 1rem;
 	color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	display: block;
+	text-decoration: none;
+	font-size: 1rem;
+	color: #DDAC30;
 }
 
 nav.navbar {
@@ -764,18 +719,11 @@ nav.navbar {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: flex;
-}
-
-.main-navigation button {
-background: transparent;
-}
 
 button.navbar-toggler {
 	background: transparent;
-	border: none;
+    border: none;
+    color: #404040;
 }
 
 
@@ -785,7 +733,8 @@ button.navbar-toggler {
 	}
 	
 	.navbar {
-		text-transform: uppercase;
+        text-transform: uppercase;
+        background-color: white !important;
 	}
 
 	ul#primary-menu.nav.navbar-nav {
@@ -795,6 +744,11 @@ button.navbar-toggler {
 	.navbar div.container {
 		margin-right: 0;
 	}
+}
+
+.dropdown-menu {
+    left: -100%;
+
 }
 
 .site-main .comment-navigation, .site-main
@@ -1109,26 +1063,28 @@ p.card-text {
 /*----- FRONT PAGE ---------*/
 
 .bio {
-    width: 70%;
-    margin:1rem auto 2rem;
-    border: 1px solid rgba(0,0,0,.125);
+    /* width: 100%;
+    margin:1rem 1rem 2rem 1rem; 
+    border: 1px solid rgba(0,0,0,.125); */
     border-radius: .25rem;
-    padding: 1rem;
-    background-color: white;
+    padding: 2rem 12rem;
+    background-color: transparent;
     z-index: 4;
     position: relative;
+    margin-bottom: 2rem; 
+    margin-top: -4rem;
 }
 
 .bio p {
     margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 .bio {
     margin: -3rem auto 2rem;
     width: 55%;
 }
-}
+} */
 
 /*----- End FRONT PAGE ---------*/
 /*-----SINGLE PROJECT PAGE -----------*/
@@ -1165,3 +1121,17 @@ p.card-text {
     }
 }
 /*-----end SINGLE PROJECT PAGE -----------*/
+/*-----BLOG PAGE -----------*/
+
+.site-content .page {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.page h1 {
+    font-family: 'Song Myung', serif;
+}
+
+
+/*-----end BLOG PAGE -----------*/
+
