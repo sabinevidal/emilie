@@ -1080,6 +1080,39 @@ object {
     background-color: white;
 }
 
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+
+}
+#s {
+        border: 1px solid #ccc;
+        border-right: none;
+        padding: 5px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #aaa; 
+  }
+
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    text-align: center;
+    color: #666;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0;
+
+  }
+
+  button #searchsubmit.searchButton {
+      padding: 0;
+  }
+
 
 
 
@@ -1175,15 +1208,38 @@ p.card-text {
 /*-----end SINGLE PROJECT PAGE -----------*/
 /*-----BLOG PAGE -----------*/
 
-.site-content .page {
+/* .site-content .page {
     width: 80%;
     margin: 4rem auto;
-}
+} */
 
 .page h1  {
     font-family: 'Song Myung', serif;
 }
 
+h2 a {
+    color: #666;
+}
+
+h2 a:hover {
+    text-decoration: none;
+}
+
+h2 a:visited {
+    color: black;
+}
 
 /*-----end BLOG PAGE -----------*/
+/*-----SEARCH PAGE -----------*/
+
+.site-content {
+    width: 90%;
+    margin: 4rem auto;
+}
+
+.content-area {
+    padding-right: 5%;
+}
+
+/*-----end SEARCH PAGE -----------*/
 
