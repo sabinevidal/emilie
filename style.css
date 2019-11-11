@@ -1310,3 +1310,14 @@ hr {
 
 
 /*-----end FOOTER -----------*/
+
+/*-----404 PAGE -----------*/
+.error-404 .widget.widget_categories ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+}
+}
+
+/*-----end 404 PAGE -----------*/
