@@ -44,7 +44,8 @@ if ( ! function_exists( 'emilie_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'emilie' ),
+            'menu-1' => esc_html__( 'Primary', 'emilie' ),
+            'secondary' => __('Secondary Navigation', 'emilie') 
 		) );
 
 		/*
@@ -112,8 +113,36 @@ function emilie_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 1',
+        'id' => 'footer-sidebar-1',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+        ) );
+        register_sidebar( array(
+        'name' => 'Footer Sidebar 2',
+        'id' => 'footer-sidebar-2',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+        ) );
+        register_sidebar( array(
+        'name' => 'Footer Sidebar 3',
+        'id' => 'footer-sidebar-3',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+        ) );
 }
+
 add_action( 'widgets_init', 'emilie_widgets_init' );
 
 /**
@@ -189,3 +218,31 @@ function create_custom_post_types() {
     );
 }
 add_action( 'init', 'create_custom_post_types' );
+
+
+//Adding different post types
+add_filter( 'pre_get_posts', 'my_get_posts' );
+
+function my_get_posts( $query ) {
+
+	if ( ( is_home() && $query->is_main_query() ) || is_feed() )
+		$query->set( 'post_type', array( 'post', 'portfolio_projects' ) );
+
+	return $query;
+}
+
+
+// Changing excerpt length
+function new_excerpt_length($length) {
+    return 70;
+    }
+    add_filter('excerpt_length', 'new_excerpt_length');
+     
+    
+
+    // Replaces the excerpt "Read More" text by a link
+        function new_excerpt_more($more) {
+            global $post;
+        return '...<a class="moretag" href="'. get_permalink($post->ID) . '"> [Read more]</a>';
+        }
+        add_filter('excerpt_more', 'new_excerpt_more');

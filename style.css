@@ -1035,20 +1035,29 @@ object {
 /*--------------------------------------------------------------
 ## Sidebar
 --------------------------------------------------------------*/
+
+
+@media (max-width: 769px) {
+    .widget-area {
+        display: none;
+    }
+}
+
 .content-area {
-	float: left;
-	margin: 0 -25% 0 0;
-	width: 100%;
+    float: left;
+    margin: 0 -25% 0 0;
+    width: 100%;
 }
 .site-main {
-	margin: 0 25% 0 0;
+    margin: 0 28% 0 0;
 }
 .site-content .widget-area {
-	float: right;
-	overflow: hidden;
-    width: 25%;
+    float: right;
+    overflow: hidden;
+    width: 22%;
     margin-top: 3rem;
 }
+
 .site-footer {
 	clear: both;
 	width: 100%;
@@ -1084,8 +1093,10 @@ object {
     width: 100%;
     position: relative;
     display: flex;
+    padding-bottom: 1.5rem;
 
 }
+
 #s {
         border: 1px solid #ccc;
         border-right: none;
@@ -1206,12 +1217,16 @@ p.card-text {
     }
 }
 /*-----end SINGLE PROJECT PAGE -----------*/
-/*-----BLOG PAGE -----------*/
+/*----- PAGES -----------*/
 
-/* .site-content .page {
-    width: 80%;
+.site-content {
+    width: 90%;
     margin: 4rem auto;
-} */
+}
+
+.content-area {
+    padding-right: 5%;
+}
 
 .page h1  {
     font-family: 'Song Myung', serif;
@@ -1229,17 +1244,69 @@ h2 a:visited {
     color: black;
 }
 
-/*-----end BLOG PAGE -----------*/
-/*-----SEARCH PAGE -----------*/
+/*-----end PAGES -----------*/
+/*-----RECENT POSTS -----------*/
 
-.site-content {
-    width: 90%;
-    margin: 4rem auto;
+@media (min-width: 480px) {
+    .blog img.attachment-post-thumbnail {
+        width: 40%;
+        float: left;
+        padding: 1rem 1.5rem 1rem 0;
+
+    }
 }
 
-.content-area {
-    padding-right: 5%;
+footer.entry-footer span{
+    font-size: 0.7rem;
+    padding-right: 0.5rem;
+   
+}
+div.entry-meta {
+    font-size: 0.7rem;
 }
 
-/*-----end SEARCH PAGE -----------*/
+/*-----end RECENT POSTS -----------*/
+/*-----FOOTER -----------*/
 
+hr {
+    width: 50%;
+    margin-bottom: 2rem;
+}
+#footer-sidebar {
+    display:block;
+    height: 250px;
+    padding-left: 3rem;
+    }
+#footer-sidebar1 {
+    float: left;
+    /* width: 30%;
+    margin-left:5px;
+    margin-right:5px; */
+}
+#footer-sidebar2 {
+    float: left;
+    /* width: 30%;
+    margin-right:5px; */
+    }
+#footer-sidebar3 {
+    float: left;
+    /* width: 30%; */
+}
+
+#footer-sidebar .secondary .row{
+    padding-right:1rem;
+}
+#footer-sidebar .widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+}
+
+.site-footer div.site-info {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/*-----end FOOTER -----------*/
