@@ -45,20 +45,12 @@ get_header();
 							?>
                         </ul>
                         <h2 class="widget-title"><?php esc_html_e('Recent Posts', 'emilie'); ?></h2>
+                        <p>You can read one of these instead</p>
                         <ul>
                             <?php get_archives('postbypost', '17', 'custom', '<li>', '</li>'); ?>
                         </ul>
 					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$emilie_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives %1$s', 'emilie' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$emilie_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-                    ?>
-                    <?php get_archives('postbypost', '17', 'custom', '<li>', '</li>'); ?>
-                    
+                
                     <p><?php esc_html_e( 'If that still didn&rsquo;t work, contact us and we&rsquo;ll see if we can help! ' , 'emilie' ); ?></p>
 
 				</div><!-- .page-content -->

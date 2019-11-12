@@ -1268,6 +1268,9 @@ div.entry-meta {
 /*-----end RECENT POSTS -----------*/
 /*-----FOOTER -----------*/
 
+footer.site-footer {
+    background-color: #EDECE6;
+}
 hr {
     width: 50%;
     margin-bottom: 2rem;
@@ -1312,12 +1315,21 @@ hr {
 /*-----end FOOTER -----------*/
 
 /*-----404 PAGE -----------*/
+.error-404 .page-header h1.page-title {
+    font-size: 3rem;
+}
+
+
 .error-404 .widget.widget_categories ul {
     list-style: none;
     margin: 0;
     padding: 0;
     padding-left: 1rem;
+    padding-bottom: 1.5rem;
 }
+
+.error-404 h2.widget-title {
+    font-size: 1.8rem;
 }
 
 /*-----end 404 PAGE -----------*/
