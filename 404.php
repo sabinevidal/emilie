@@ -32,28 +32,37 @@ get_header();
                     </form>
                     <p><?php esc_html_e( 'If there&rsquo;s nothing there, why don&rsquo;t you try look at some of the categories or posts' , 'emilie' ); ?></p>
 					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'emilie' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-                        </ul>
-                        <h2 class="widget-title"><?php esc_html_e('Recent Posts', 'emilie'); ?></h2>
-                        <p>You can read one of these instead</p>
-                        <ul>
-                            <?php get_archives('postbypost', '17', 'custom', '<li>', '</li>'); ?>
-                        </ul>
+						<div class="404-categories">
+                            <h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'emilie' ); ?></h2>
+                            <ul>
+                                <?php
+                                wp_list_categories( array(
+                                    'orderby'    => 'count',
+                                    'order'      => 'DESC',
+                                    'show_count' => 1,
+                                    'title_li'   => '',
+                                    'number'     => 10,
+                                ) );
+                                ?>
+                            </ul>
+                        </div>
+                        <hr/>
+                        <div class="404-recent">
+                            <p>Or you can read one of these instead:</p>
+                            <h2 class="widget-title"><?php esc_html_e('Recent Posts', 'emilie'); ?></h2>
+                        
+                            <ul>
+                                <?php get_archives('postbypost', '17', 'custom', '<li>', '</li>'); ?>
+                            </ul>
+                        </div>
 					</div><!-- .widget -->
-                
+                <hr/>
                     <p><?php esc_html_e( 'If that still didn&rsquo;t work, contact us and we&rsquo;ll see if we can help! ' , 'emilie' ); ?></p>
 
-				</div><!-- .page-content -->
+                </div><!-- .page-content -->
+                <div class="404-image">
+                    <!-- <img> image slider -->
+                </div> 
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
