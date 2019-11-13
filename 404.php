@@ -32,7 +32,17 @@ get_header();
                     </form>
                     <p><?php esc_html_e( 'If there&rsquo;s nothing there, why don&rsquo;t you try look at some of the categories or posts' , 'emilie' ); ?></p>
 					<div class="widget widget_categories">
-						<div class="404-categories">
+						<div class="404-projects">
+                            <h2 class="widget-title"><?php esc_html_e( 'Projects', 'emilie' ); ?></h2>
+                            <?php $loop = new WP_Query( array( 'post_type' => 'portfolio_projects', 'posts_per_page' => 10 ) ); ?>
+
+                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                            <ul>
+                                <?php the_title( '<li class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></li>' ); ?>
+                            </ul> 
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="404-categories">
                             <h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'emilie' ); ?></h2>
                             <ul>
                                 <?php
