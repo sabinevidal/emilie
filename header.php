@@ -48,25 +48,31 @@
 			</div>
 		</nav><!-- #site-navigation -->
 			<div class="branding-header">
+           	
 				<div class="site-branding">
-				
+                    <div id="header-image" >
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                        <img src="<?php echo get_template_directory_uri(); ?>/inc/emilie-name.png" alt="Logo" width="HERE" height="HERE" />
+                        </a> 
+                    </div>
 					<?php
 					the_custom_logo();
 					if ( is_front_page() && is_home() ) :
 						?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php
+                        <?php
 					else :
 						?>
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 						<?php
-					endif;
+                    endif;
+                    
 					$emilie_description = get_bloginfo( 'description', 'display' );
 					if ( $emilie_description || is_customize_preview() ) :
 						?>
 						<p class="site-description"><?php echo $emilie_description; /* WPCS: xss ok. */ ?></p>
-					<?php endif; ?>
-					
+                    <?php endif; ?>
+                    
 				</div><!-- .site-branding -->
 
 					<?php if ( get_header_image() ) : ?>

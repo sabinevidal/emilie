@@ -68,15 +68,20 @@ get_header();
 					</div><!-- .widget -->
                 <hr/>
                     <p><?php esc_html_e( 'If that still didn&rsquo;t work, contact us and we&rsquo;ll see if we can help! ' , 'emilie' ); ?></p>
-
+                
                 </div><!-- .page-content -->
-                <div class="404-image">
-                    <!-- <img> image slider -->
-                </div> 
+             
 			</section><!-- .error-404 -->
 
-		</main><!-- #main -->
+        </main><!-- #main -->
+       
 	</div><!-- #primary -->
-
+    <div id="error-sidebar" class="widget-area">
+            <?php
+                if(is_active_sidebar('error-sidebar')){
+                dynamic_sidebar('error-sidebar');
+                }
+            ?>
+    </div>
 <?php
 get_footer();

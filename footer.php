@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-        <hr/>
+        <!-- <hr/> -->
 		<div class="container">
             <div id="footer-sidebar" class="secondary row">
                 <div id="footer-sidebar1" class="col-sm-3">

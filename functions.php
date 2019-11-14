@@ -149,6 +149,15 @@ function emilie_widgets_init() {
             'after_widget' => '</aside>',
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>',
+        ) );
+        register_sidebar( array(
+            'name' => 'Error Sidebar',
+            'id' => 'error-sidebar',
+            'description' => 'Appears on the 404 page',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
             ) );
 }
 

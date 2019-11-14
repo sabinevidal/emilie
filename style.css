@@ -683,6 +683,12 @@ a:hover, a:active {
  .site-description {
     margin-block-start: -1em;
  }
+
+#header-image {
+    width: 60%;
+    margin: auto;
+    margin-top: -4%;
+}
  @media screen and (min-width: 768px) {
 	.page-header .site-branding .site-title {
 		font-size: 3em;
@@ -725,6 +731,10 @@ button.navbar-toggler {
 	background: transparent;
     border: none;
     color: #404040;
+}
+
+.bg-light {
+    background: none !important;
 }
 
 
@@ -1277,8 +1287,9 @@ hr {
 }
 #footer-sidebar {
     display:block;
-    height: 200px;
+    height: 240px;
     padding-left: 3rem;
+    margin-top:3rem;
     }
 #footer-sidebar1 {
     float: left;
@@ -1327,7 +1338,9 @@ hr {
     font-size: 3rem;
 }
 
-
+.error404 .site-content {
+    width: 70%;
+}
 .error-404 .widget.widget_categories ul {
     list-style: none;
     margin: 0;
@@ -1340,4 +1353,17 @@ hr {
     font-size: 1.8rem;
 }
 
+#error-sidebar {
+    padding: 0;
+    padding-top: 5rem;
+    width: 25%;
+}
+
+.gallery-item {
+    margin: 0;
+    padding: 0.1rem;
+}
+.gallery-caption {
+    display: none;
+}
 /*-----end 404 PAGE -----------*/
