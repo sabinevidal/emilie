@@ -1277,7 +1277,7 @@ hr {
 }
 #footer-sidebar {
     display:block;
-    height: 250px;
+    height: 200px;
     padding-left: 3rem;
     }
 #footer-sidebar1 {
@@ -1304,6 +1304,14 @@ hr {
     margin: 0;
     padding: 0;
     padding-left: 1rem;
+}
+
+#footer-sidebar div.widget h3.widget-title, #footer-sidebar aside.widget h3.widget-title  {
+    font-size: 1.5rem;
+}
+
+#footer-sidebar div.widget li, #footer-sidebar aside.widget li  {
+    font-size: 0.9rem;
 }
 
 .site-footer div.site-info {

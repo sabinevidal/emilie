@@ -141,6 +141,15 @@ function emilie_widgets_init() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
         ) );
+        register_sidebar( array(
+            'name' => 'Footer Sidebar 4',
+            'id' => 'footer-sidebar-4',
+            'description' => 'Appears in the footer area',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+            ) );
 }
 
 add_action( 'widgets_init', 'emilie_widgets_init' );
@@ -246,3 +255,5 @@ function new_excerpt_length($length) {
         return '...<a class="moretag" href="'. get_permalink($post->ID) . '"> [Read more]</a>';
         }
         add_filter('excerpt_more', 'new_excerpt_more');
+
+
