@@ -1340,6 +1340,7 @@ hr {
 
 .error404 .site-content {
     width: 70%;
+    margin-top: 2rem;
 }
 .error-404 .widget.widget_categories ul {
     list-style: none;
