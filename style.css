@@ -641,7 +641,17 @@ a:hover, a:active {
 	padding: .75em 0;
   }
 .site-header img {
-	width: 100%;
+    width: 100%;
+    margin-top: -1rem;
+    margin-bottom: -8rem;
+   
+}
+
+.site-header .site-branding img {
+    width: 100%;
+    margin-top: -4rem;
+    margin-bottom: -8rem;
+    background: #DDAC30;
 }
 
 .page-header {
@@ -707,7 +717,8 @@ a:hover, a:active {
 	display: block;
 	text-decoration: none;
 	font-size: 1rem;
-	color: #000;
+    color: #000;
+    
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -734,7 +745,7 @@ button.navbar-toggler {
 }
 
 .bg-light {
-    background: none !important;
+    background-color: rgba(255, 255, 255, 0.44)!important;
 }
 
 
@@ -745,7 +756,7 @@ button.navbar-toggler {
 	
 	.navbar {
         text-transform: uppercase;
-        background-color: white !important;
+        background-color: rgba(255, 255, 255, 0.44) !important;
 	}
 
 	ul#primary-menu.nav.navbar-nav {
@@ -1173,24 +1184,26 @@ p.card-text {
     margin:1rem 1rem 2rem 1rem; 
     border: 1px solid rgba(0,0,0,.125); */
     border-radius: .25rem;
-    padding: 2rem 12rem;
-    background-color: transparent;
+    padding: 6rem 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.44);
     z-index: 4;
     position: relative;
     margin-bottom: 2rem; 
     margin-top: -4rem;
+    
 }
 
 .bio p {
     margin-bottom: 0;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
 .bio {
-    margin: -3rem auto 2rem;
-    width: 55%;
+    padding: 2rem 18rem;
+    margin-left: -4rem;
+    margin-right: -8rem;
 }
-} */
+}
 
 /*----- End FRONT PAGE ---------*/
 /*-----SINGLE PROJECT PAGE -----------*/
@@ -1290,7 +1303,9 @@ hr {
     height: 240px;
     padding-left: 3rem;
     margin-top:3rem;
-    }
+    margin-bottom: 5rem;
+}
+
 #footer-sidebar1 {
     float: left;
     /* width: 30%;
@@ -1328,6 +1343,7 @@ hr {
 .site-footer div.site-info {
     text-align: center;
     font-size: 0.8rem;
+    padding-bottom: 0.5rem;
 }
 
 
