@@ -37,7 +37,7 @@ get_header();
                     $image_1 = get_field("image_7");
                     $image_1 = get_field("image_8");
                     $image_1 = get_field("image_9");
-                    $link = get_field('link');
+                    $url = get_field('url');
                     $size = "full";
                     
 				?>
@@ -46,7 +46,7 @@ get_header();
                             <div class="card-columns">
                                 <?php if ($image_1 = get_field('image_1')) { ?>
                                     <div class="card project-info">
-                                    <a href="<?php get_field('link') ?>" target="_blank"><?php if($image_1) {
+                                    <a href="<?php echo esc_url($url); ?>"><?php if($image_1) {
                                                 echo wp_get_attachment_image( $image_1, $size );
                                         } ?> 
                                     </a>
@@ -54,58 +54,73 @@ get_header();
                                 <?php } ?>
                                 <?php if ($image_2 = get_field('image_2')) { ?>
                                     <div class="card">
+                                    <a href="<?php echo esc_url($url); ?>"> 
                                         <?php if($image_2) {
-                                                echo wp_get_attachment_image( $image_2, $size );
-                                        } ?> 
+                                                echo wp_get_attachment_image( $image_2, $size,  );
+                                        } ?>
+                                    </a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_3 = get_field('image_3')) { ?>
                                     <div class="card">
-                                        <?php if($image_3) {
+                                    <a href="<?php echo esc_url($url); ?>"><?php if($image_3) {
                                                 echo wp_get_attachment_image( $image_3, $size );
-                                        } ?> 
+                                        } ?>
+                                    </a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_4 = get_field('image_4')) { ?>
                                     <div class="card">
+                                    <a href="<?php echo esc_url($url); ?>">
                                         <?php if($image_4) {
                                                 echo wp_get_attachment_image( $image_4, $size );
                                         } ?> 
+                                    </a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_5 = get_field('image_5')) { ?>
                                     <div class="card">
+                                    <a href="<?php echo esc_url($url); ?>"> 
                                         <?php if($image_5) {
                                                 echo wp_get_attachment_image( $image_5, $size );
                                         } ?> 
+                                    </a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_6 = get_field('image_6')) { ?>
                                     <div class="card">
+                                    <a href="<?php echo esc_url($url); ?>">
                                         <?php if($image_6) {
                                                 echo wp_get_attachment_image( $image_6, $size );
                                         } ?> 
+                                    </a>    
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_7 = get_field('image_7')) { ?>
                                     <div class="card">
+                                    <a href="<?php echo esc_url($url); ?>">
                                         <?php if($image_7) {
                                                 echo wp_get_attachment_image( $image_7, $size );
-                                        } ?> 
+                                        } ?>
+                                    </a>     
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_8 = get_field('image_8')) { ?>
                                     <div class="card">
+                                    <a href="<?php echo esc_url($url); ?>">
                                         <?php if($image_8) {
                                                 echo wp_get_attachment_image( $image_8, $size );
                                         } ?> 
+                                    </a>
                                     </div>
                                 <?php } ?>
                                 <?php if ($image_9 = get_field('image_9')) { ?>
                                     <div class="card">
+                                    <a href="<?php echo esc_url($url); ?>">
                                         <?php if($image_9) { 
                                                 echo wp_get_attachment_image( $image_9, $size );
                                         } ?>
+                                    </a>
                                     </div>
                                 <?php } ?>
                             </div>
